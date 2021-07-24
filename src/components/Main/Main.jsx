@@ -4,10 +4,11 @@ import info from "../../assets/icons/info.png"
 import mais from "../../assets/icons/plus.png"
 
 import "./MainStyle.scss"
+import Previas from '../Previas/Previas'
 
 export default function Main({ film }) {
 
-  const { image , genres } = film
+  const { image, genres } = film
 
   return (
     <div className="Main-container">
@@ -16,27 +17,28 @@ export default function Main({ film }) {
         <img src={image?.medium} alt="" className="image-fundo" />
       </div>
 
-      <section className="gender-section">
-        <ul className="genre">{genres?.map(genre =>  <li key={genre} >{genre}</li>)}</ul>
-      </section>
-      
+      <main className='component-main'>
+        <section className="gender-section">
+          <ul className="genre">{genres?.map(genre => <li key={genre} >{genre}</li>)}</ul>
+        </section>
+
 
         <section className="button-towatch">
           <div className="plus">
-            <img src={mais} alt ="plus icon"></img>
-              <p>Minha lista</p>
+            <img src={mais} alt="plus icon"></img>
+            <p>Minha lista</p>
           </div>
           <div className="play">
-            <img src={playIcon} alt = "play icon"></img>
-              <p>Assistir</p>
+            <img src={playIcon} alt="play icon"></img>
+            <p>Assistir</p>
           </div>
           <div className="info">
-            <img src={info} alt = "info icon"></img>
-              <p>Saiba mais</p>
+            <img src={info} alt="info icon"></img>
+            <p>Saiba mais</p>
           </div>
-          <img src="" alt="" />
         </section>
-        
+      </main>
+        <Previas />
     </div>
 
   )

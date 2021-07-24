@@ -1,94 +1,96 @@
-.button-towatch {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-
-.Main-container{
+.Main-container {
   width: 100%;
   padding: 0;
   margin: 0;
-
-  .image-fundo {
-    width: 100%;
-
-  }
-}
-
-
-.image-container{
-  position: relative;
   
+
+  .image-container {
+    position: relative;
+    
+    .image-fundo {
+      width: 100%;
+    }
+
     &:after {
       position: absolute;
-      content:"";
-      height:100%;
-      width:100%;
-      bottom:0;
-      left:0;
-      background: linear-gradient(to bottom, rgba(255,0,0,0) 90%,rgba(0, 0, 0, 0.781) 100%);
+      content: "";
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 0, 0, 0) 90%,
+        rgba(0, 0, 0, 0.781) 100%
+      );
+    }
+
   }
-
-
-}
-
-
-
-
-ul {
-  :first-child {
-    list-style: none;
-  }
-  display: flex;
-  gap: 50px;
-  
-}
-
-
-.plus{
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // border: 2px solid red;
-   img{
-     max-width: 5vw;
-     height: auto;
-    //  filter: invert(100%);
-   }
-}
-
-.play{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 150px;
-  height: 40px;
-  border: 2px solid red;
-  border-radius: 10px;
-   img{
-     width: 25px;
-     height: auto;
     
-   }
-}
+  .gender-section{
+    display: flex;
+    position: fixed;
+    left: 15%;
+    top: 68%;
 
-.info {
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  // border: 2px solid red;
-   img{
-     max-width: 5vw;
-     height: auto;
-    //  filter: invert(100%);
-   }
-}
+    ul {
+      :first-child {
+        list-style: none;
+      }
+      display: flex;
+      gap: 50px;
+    }
+    
 
+    .button-towatch {
+      display: flex;
+      justify-content: space-around;
+      position: fixed;
+      left: 9%;
+      top: 75%;
+      gap: 15px;
+
+      .plus {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 5vw;
+          height: auto;
+        }
+      }
+
+      .play {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 150px;
+        height: 40px;
+        border: 2px solid red;
+        border-radius: 10px;
+        img {
+          width: 25px;
+          height: auto;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          max-width: 5vw;
+          height: auto;
+        }
+      }
+    }
+  }
 
 

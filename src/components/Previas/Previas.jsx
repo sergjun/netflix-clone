@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import "./PreviasStyle.scss"
 
-
-
-
-export default function Previas() {
+export default function Previas({image}) { 
   
   const [listFilm, setList] = useState([])
+  const listamenor = listFilm.slice(0,10)
+
   useEffect(() => {
     const getListFromApi = async () => {
       const data = await fetch(`https:/api.tvmaze.com/shows`)
@@ -14,23 +13,19 @@ export default function Previas() {
        console.log(response)
       setList(response)
     }
-    getListFromApi()
+    setTimeout(() => {
+      getListFromApi()
+    },[2000])
   }, [])
     
-  const listamenor = listFilm.slice(0,10)
-
   console.log(listFilm)
 
   return (
     <div>
       <h3>Prévias</h3>
        <div className="lista-container">
-         
            {listamenor?.map(function (list) {
-            return <img className="lista-imagem" src={list.image.original} alt ={list.name} key = {list.id}></img> 
-           
-          })}
-         
+            return <img className="lista-imagem" src={list.image.original} alt ={list.name} key = {list.id}></img>})}
        </div>
 
        </div>

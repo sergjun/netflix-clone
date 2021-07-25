@@ -14,7 +14,7 @@ export default function Main({ film }) {
     <div className="Main-container">
 
       <div className="image-container">
-        <img src={image?.medium} alt="" className="image-fundo" />
+        <img src={image?.original} alt="" className="image-fundo" />
       </div>
 
       <main className='component-main'>

@@ -8,7 +8,7 @@ import Previas from '../Previas/Previas'
 
 export default function Main({ film }) {
 
-  const { image, genres } = film
+  const { image, genres } = film;
 
   return (
     <div className="Main-container">

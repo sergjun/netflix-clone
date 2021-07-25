@@ -1,0 +1,18 @@
+h3 {
+  color: white;
+  margin: 30px 10px;
+  font-family: SF Pro Text, sans-serif;
+}
+
+.lista-container {
+  overflow: scroll;
+  white-space: nowrap;
+  .lista-imagem {
+    border-radius: 50% 50% 50% 50%;
+    width: 165px;
+    height: 160px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid white;
+  }
+}

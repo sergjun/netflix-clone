@@ -6,13 +6,20 @@ h3 {
 
 .lista-container {
   overflow: scroll;
+  overflow-y: hidden;
   white-space: nowrap;
+  top: 400px;
+
   .lista-imagem {
     border-radius: 50% 50% 50% 50%;
-    width: 165px;
-    height: 160px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    margin: 0px 10px 0px 10px;
+    border: 2px solid rgba(255, 255, 255, 0.664);
   }
+}
+
+.lista-container::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }

@@ -13,32 +13,32 @@ export function Main({ film }) {
     <div className="Main-container">
       <div className="image-container">
         <img src={image?.original} alt="" className="image-fundo" />
+        <main className="component-main">
+          <section className="gender-section">
+            <ul className="genre">
+              {genres?.map((genre) => (
+                <li key={genre}>{genre}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="button-towatch">
+            <div className="plus">
+              <img src={mais} alt="plus icon"></img>
+              <p>Minha lista</p>
+            </div>
+            <div className="play">
+              <img src={playIcon} alt="play icon"></img>
+              <p>Assistir</p>
+            </div>
+            <div className="info">
+              <img src={info} alt="info icon"></img>
+              <p>Saiba mais</p>
+            </div>
+          </section>
+        </main>
       </div>
 
-      <main className="component-main">
-        <section className="gender-section">
-          <ul className="genre">
-            {genres?.map((genre) => (
-              <li key={genre}>{genre}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="button-towatch">
-          <div className="plus">
-            <img src={mais} alt="plus icon"></img>
-            <p>Minha lista</p>
-          </div>
-          <div className="play">
-            <img src={playIcon} alt="play icon"></img>
-            <p>Assistir</p>
-          </div>
-          <div className="info">
-            <img src={info} alt="info icon"></img>
-            <p>Saiba mais</p>
-          </div>
-        </section>
-      </main>
       <Previas />
     </div>
   );

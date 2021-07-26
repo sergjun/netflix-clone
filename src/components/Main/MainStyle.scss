@@ -1,9 +1,128 @@
-.Main-container{
-  width: 100%;
-  padding: 0;
-  margin: 0;
-
-  .image-fundo {
+@media (max-width: 425px) {
+  .Main-container {
     width: 100%;
+
+    .image-container {
+      position: relative;
+
+      .image-fundo {
+        max-width: 100%;
+
+        &:after {
+          position: fixed;
+          content: "";
+          height: 100%;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          // background: linear-gradient(
+          //   to bottom,
+          //   rgba(255, 0, 0, 0) 1%,
+          //   rgba(0, 0, 0, 0.781) 100%
+          // );
+        }
+      }
+    }
+
+    .component-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 150px;
+      top: 65%;
+      background-image: linear-gradient(
+        to top,
+        black,
+        rgba(0, 0, 0, 0.808),
+        rgba(0, 0, 0, 0)
+      );
+
+      .gender-section {
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+        list-style: none;
+        font-family: SF Pro Text, sans-serif;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+        color: white;
+        margin-bottom: 20px;
+
+        li::before {
+          content: "\2022";
+          color: rgba(252, 252, 252, 0.281);
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+
+      .button-towatch {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        right: 50px;
+
+        .plus {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-family: SF Pro Text, sans-serif;
+          font-size: 10px;
+          gap: 1px;
+
+          img {
+            max-width: 5vw;
+            height: auto;
+            margin: 3px;
+          }
+        }
+
+        .play {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          width: 130px;
+          height: 35px;
+          border-radius: 3px;
+          background-color: white;
+          font-family: SF Pro Text, sans-serif;
+
+          img {
+            width: auto;
+            height: 15px;
+            margin-right: 15px;
+          }
+        }
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-family: SF Pro Text, sans-serif;
+          font-size: 10px;
+          gap: 1px;
+
+          img {
+            max-width: 5vw;
+            height: auto;
+            margin: 3px;
+          }
+        }
+      }
+    }
   }
 }

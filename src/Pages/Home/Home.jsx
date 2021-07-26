@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { Header } from '../../components/Header'
-import Main from '../../components/Main/Main'
+import { Header, MenuBar, Main } from '../../components/index'
+import { getFilmById } from '../../services/filmServices'
+import { randomId } from '../../utils/randomId'
 
 export default function Home() {
-  
   const [ film, setFilm ] = useState("")
 
   useEffect(() => {
-    const getFilmFromApi = async () => {
-      const data = await fetch("https://api.tvmaze.com/shows/1")
-      const response = await data.json()
-      console.log(response)
-      setFilm(response)
-    }
-    getFilmFromApi()
+    (async function () {
+      const id = randomId(1,239)
+      const data = await getFilmById(id)
+      setFilm(data)
+    })()
   }, [])
 
-  
-
   return (
-    <div> 
+    <>
       <Header />
-      <Main 
-        film={film}
-      />
-    </div>
+      <Main film={film}/>
+      <MenuBar />
+    </>
   )
 }

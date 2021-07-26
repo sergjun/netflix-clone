@@ -1,0 +1,33 @@
+.menu-container {
+  padding: 10px 0px;
+  width: 100%;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  bottom: 0px;
+
+  .item-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .image-item {
+      height: 20px;
+    }
+
+    .text-item-selecionado {
+      margin-top: 0.5px;
+      font-size: 13.5px;
+      font-family: SF Pro Text, sans-serif;
+      color: #ffff;
+    }
+
+    .text-item {
+      font-size: 13.5px;
+      font-family: SF Pro Text, sans-serif;
+      color: #7d7d7d;
+      margin-top: 0.5px;
+    }
+  }
+}

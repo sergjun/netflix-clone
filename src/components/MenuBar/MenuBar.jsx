@@ -1,12 +1,8 @@
 import React from 'react'
-import homeIcon from "../../assets/icons/home.svg"
-import searchIcon from "../../assets/icons/search.svg"
-import playGroup from "../../assets/icons/playGroup.svg"
-import download from "../../assets/icons/download.svg"
-import menu from "../../assets/icons/menu.svg"
+import { homeIcon, searchIcon , playGroup, downloadIcon, menuIcon } from '../../assets/icons'
 import "./MenuStyle.scss"
 
-export default function MenuBar() {
+export function MenuBar() {
   return (
     <div className="menu-container">
 
@@ -26,12 +22,12 @@ export default function MenuBar() {
       </div>
 
       <div className="item-menu" >
-        <img src={download} alt="" className="image-item" />
+        <img src={downloadIcon} alt="" className="image-item" />
         <p className="text-item" > Downloads </p>
       </div>
 
       <div className="item-menu" >
-        <img src={menu} alt=""  className="image-item"/>
+        <img src={menuIcon} alt=""  className="image-item"/>
         <p  className="text-item"  > Mais </p>
       </div>
 

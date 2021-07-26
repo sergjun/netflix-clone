@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./PreviasStyle.scss"
 
-export default function Previas({data}) { 
+export function Previas({data}) { 
 
   const [listFilm, setList] = useState([])
   const listamenor = listFilm.slice(10,20)

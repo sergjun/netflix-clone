@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Header, MenuBar, Main } from '../../components/index'
+import { Main } from '../../components/index'
 import { getFilmById } from '../../services/filmServices'
-import { randomId } from '../../utils/randomId'
+import { randomId } from '../../utils/randomId';
+import "./HomeStyle.scss";
 
-export default function Home() {
+export function Home() {
   const [ film, setFilm ] = useState("")
 
   useEffect(() => {
@@ -15,10 +16,8 @@ export default function Home() {
   }, [])
 
   return (
-    <>
-      <Header />
+    <div className='home-container'>
       <Main film={film}/>
-      <MenuBar />
-    </>
+    </div>
   )
 }

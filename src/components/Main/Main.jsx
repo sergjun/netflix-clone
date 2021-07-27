@@ -5,6 +5,7 @@ import mais from "../../assets/icons/plus.png";
 
 import "./MainStyle.scss";
 import { Previas } from "../Previas/Previas";
+import{ KeepWatching } from "../index";
 
 export function Main({ film }) {
   const { image, genres } = film;
@@ -40,6 +41,7 @@ export function Main({ film }) {
       </div>
 
       <Previas />
+      <KeepWatching />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getFilms } from "../../services/filmServices";
 import "./PreviasStyle.scss";
 
 export function Previas({ data }) {
@@ -6,12 +7,11 @@ export function Previas({ data }) {
   const listamenor = listFilm.slice(10, 20);
 
   useEffect(() => {
-    const getListFromApi = async () => {
-      const data = await fetch(`https:/api.tvmaze.com/shows`);
-      const response = await data.json();
-      setList(response);
-    };
-    getListFromApi();
+    (async function () {
+      const data = await getFilms()
+      setList(data);
+    })();
+  
   }, []);
 
   return (

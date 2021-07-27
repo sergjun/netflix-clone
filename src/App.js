@@ -12,7 +12,6 @@ import "./GlobalStyle.scss";
 export default function App() {
   return (
     <Router>
-
       <Switch>
         <Route path="/minha-lista">
           <MyList />

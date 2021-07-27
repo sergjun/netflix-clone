@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Main } from '../../components/index'
+import { Header, Main } from '../../components/index'
 import { getFilmById } from '../../services/filmServices'
 import { randomId } from '../../utils/randomId';
 import "./HomeStyle.scss";
@@ -17,6 +17,7 @@ export function Home() {
 
   return (
     <div className='home-container'>
+      <Header />
       <Main film={film}/>
     </div>
   )

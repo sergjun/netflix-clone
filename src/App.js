@@ -5,14 +5,13 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import { Header, MenuBar } from "./components";
+import {  MenuBar } from "./components";
 import { Home, MyList, Series, Films} from "./Pages";
 import "./GlobalStyle.scss";
 
 export default function App() {
   return (
     <Router>
-      <Header />
       <Switch>
         <Route path="/minha-lista">
           <MyList />

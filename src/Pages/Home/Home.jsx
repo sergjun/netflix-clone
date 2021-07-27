@@ -18,10 +18,7 @@ export function Home() {
   return (
     <>
     <Header />
-    <div className='home-container'>
-      <Header />
-      <Main film={film}/>
-    </div>
+    <Main film={film}/>
     </>
   )
 }

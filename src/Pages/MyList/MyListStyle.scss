@@ -1,7 +1,77 @@
-.my-list-page-container {
-  width: 100%;
-  min-height: calc(100% - 50px);
+.header-component {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 19px 0;
+  cursor: pointer;
+
+  .header__icon--back {
+    width: 1.625rem;
+    height: 1.1875rem;
+    position: relative;
+    right: 80px;
+  }
+
+  .header__text--title {
+    margin: 0;
+  }
+
+  .botao-voltar {
+    right: 72px;
+    position: relative;
+    font-size: 20px;
+  }
 }
+
+
+.list-container {
+  width: 100%;
+  min-height: calc(100% - 50px);
+
+  .header__search--input {
+    background-color: #b6b6b6;
+    width: 338px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #212121;
+    margin: 0 10px;
+    padding-left: 30px;
+  }
+  
+  .header__search--icon {
+    position: relative;
+    bottom: 29px;
+    left: 16px;
+  }
+
+  .main-list {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 11px;
+
+    .Add-Film {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+
+      .plus-icon {
+        font-size: 45px;
+        font-weight: bold;
+        color: #7d7d7d;
+      }
+    }
+
+    .list-item {
+      margin-left: 16px;
+      color: #7d7d7d;
+    }
+}
+
+
+}
+
+
+
+ 

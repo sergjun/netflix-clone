@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { getFilms } from '../../services/filmServices'
+import { infoIcon } from "../../assets/icons/index"
 import "./KeepWatchingStyle.scss"
+
 
 
 export function KeepWatching() {
   const [films, setFilms] = useState([])
-  const limitImages = films.slice(0, 10)
+  const limitImages = films.slice(20, 30)
 
 
   useEffect(() => {
@@ -17,20 +19,26 @@ export function KeepWatching() {
 
   }, [])
 
+
   return (
-    <div className="keep-watching-container">
+    <>
       <h1 className="title-keep">Continuar assistindo como PEDRO</h1>
-      <div className="keep-conatiner">
+
+      <div className="keep-watching-container">
         {limitImages?.map(function (film) {
           return (
             <>
-              <div key={film.id}> <img src={film.image.medium} alt={film.name} /> </div>
-              <div className="footer-keep"> oii </div>
+              <div id={film.id} className="keep-conatiner" >
+                <img src={film.image.medium} alt={film.name} className="image__keep--item" />
+                <div className="footer-keep">
+                  <p> { `${film.runtime}m` } </p>
+                  <img src={infoIcon} className="icon__keep--info" alt="ajuda/descrição"/>
+                </div>
+              </div>
             </>
           )
         })}
       </div>
-
-    </div>
+    </>
   )
 }

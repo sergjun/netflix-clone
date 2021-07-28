@@ -1,11 +1,41 @@
 .title-keep {
   color: white;
+  font-family: SF Pro Text, sans-serif;
+  font-size: 1.1rem;
+  margin: 15px 5px ;
 }
 
-.keep-conatiner {
+.keep-watching-container {
   display: flex;
   overflow: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  top: 400px;
+  gap: 15px;
+  margin-left: 8px;
+
+  .keep-conatiner {
+    display: flex;
+    flex-direction: column;
+    top: 400px;
+
+    .image__keep--item {
+      width: 6.5rem;
+    }
+
+    .footer-keep {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 2rem;
+      background-color: rgb(34, 34, 34);
+      color: white;
+      font-family: SF Pro Text, sans-serif;
+
+      .icon__keep--info {
+        height: 15px;
+        cursor: pointer;
+      }
+    }
+  }
 }
